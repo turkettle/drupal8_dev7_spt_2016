@@ -1,0 +1,7 @@
+name: Livres
+type: module
+description: Provides a Book application for the website.
+core: 8.x
+package: Aston
+dependencies:
+  - node

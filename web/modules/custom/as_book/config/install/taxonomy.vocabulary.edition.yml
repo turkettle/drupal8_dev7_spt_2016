@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Maison d''Édition'
+vid: edition
+description: ''
+hierarchy: 0
+weight: 0
