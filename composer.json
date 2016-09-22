@@ -24,7 +24,8 @@
         "drupal/console": "~1.0",
         "drupal/devel": "8.*",
         "drupal/search_kint": "8.*",
-        "drupal/admin_toolbar": "8.*"
+        "drupal/admin_toolbar": "8.*",
+        "drupal/bootstrap": "8.*"
     },
     "require-dev": {
         "behat/mink": "~1.7",
