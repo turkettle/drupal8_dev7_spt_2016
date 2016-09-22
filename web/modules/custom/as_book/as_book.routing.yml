@@ -6,3 +6,12 @@ as_book.default_controller_listing:
     _title: 'Book Listing'
   requirements:
     _permission: 'access content'
+
+as_book.reservation_form:
+  path: '/as_book/form/reservation'
+  defaults:
+    _form: '\Drupal\as_book\Form\ReservationForm'
+    _title: 'ReservationForm'
+  requirements:
+    _access: 'TRUE'
+  
