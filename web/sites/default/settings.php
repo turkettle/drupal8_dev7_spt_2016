@@ -690,7 +690,7 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * For example:
  * @code
- * $settings['trusted_host_patterns'] = array(
+ *$settings['trusted_host_patterns'] = array(
  *   '^example\.com$',
  *   '^.+\.example\.com$',
  *   '^example\.org$',
@@ -726,3 +726,11 @@ $databases['default']['default'] = array (
 );
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/default/files/config_YGBkMi9MrMoAbsoVl3Dw72NPTVlB7OIH1pij53obJCBNQUJ66OH_Q0aTS35pFCy0aVqWDTSgCA/sync';
+$settings['trusted_host_patterns'] = array(
+  '^localhost$',
+  '^.+\.localhost$',
+  '^127.0.0.1',
+  '^.+\.127.0.0.1',
+  '^127.0.0.1/web',
+  '^.+\.127.0.0.1/web',
+);

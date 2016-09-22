@@ -1,0 +1,9 @@
+<div class="book-list-wrapper">
+
+  {% for index, book in elements.books %}
+    <div class="row-book row-{{ index }}">
+      {{ book }}
+    </div>
+  {% endfor %}
+
+</div>
