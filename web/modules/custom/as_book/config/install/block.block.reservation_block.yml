@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+    module:
+        - as_book
+        - node
+    theme:
+        - as_theme
+id: reservation_block
+theme: as_theme
+region: sidebar_second
+weight: null
+provider: null
+plugin: reservation_block
+settings:
+    id: broken
+    label: 'Réserver ce livre'
+    provider: as_book
+    label_display: visible
+visibility:
+    node_type:
+        id: node_type
+        bundles:
+            book: book
+        negate: false
+        context_mapping:
+            node: '@node.node_route_context:node'
