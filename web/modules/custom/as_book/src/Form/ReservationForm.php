@@ -24,6 +24,7 @@ class ReservationForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    // kint($form_state);die();
 
     $form['reservation'] = [
       '#type' => 'submit',
@@ -50,9 +51,14 @@ class ReservationForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Display result.
-    foreach ($form_state->getValues() as $key => $value) {
-        drupal_set_message($key . ': ' . $value);
+
+    $reservation = \Drupal\node\Entity\Node::create(['type' => 'booking', 'status' => '1']);
+    $reservation->set('field_client', \Drupal::currentUser()->id());
+    $reservation->set('field_book', $form_state->getValue('book_id'));
+    $reservation->set('title', 'Réservation n°163');
+
+    if ($reservation->save()) {
+      drupal_set_message('Votre réservation a bien été prise en charge par la bibliothèque de Paris.');
     }
 
   }
